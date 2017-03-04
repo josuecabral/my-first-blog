@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> {% block head_title %} {% endblock %} </title> 
+	<link rel='stylesheet' href = '{% static "css/base.css" %}'/>
+</head>
+<body style="background-color:STEELBLUE;">
+
+<ul>
+	<li> <a href= '{% url "inicio" %}'> Inicio </a> </li>
+	<li> <a href= '{% url "registrados" %}'> Registrados </a> </li>
+</ul>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

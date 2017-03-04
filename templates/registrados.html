@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head_title %}
+REGISTRADOS
+{% endblock %}
+
+{% block content %}
+<h1>{{ titulo }}</h1>
+
+<p>Estos son los usuarios registrados hasta el momento.</p>
+
+
+{% for obj in queryset %}
+<p> Nombre: {{ obj.nombre }}  </p> <p> DNI: {{ obj.dni }} </p> <p>------------------------</p>
+<!-- <ul><li>{{ obj.nombre }}</li></ul> -->
+
+
+ {% endfor %}
+
+{% endblock %}
